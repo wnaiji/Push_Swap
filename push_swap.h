@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wnaiji <wnaiji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:22:02 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/22 16:03:03 by wnaiji           ###   ########.fr       */
+/*   Updated: 2023/05/23 14:33:25 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ int	ft_cases_3_check_reverse(t_list *stack_a);
 
 //algo de trie:
 //ft_what_size.c
-void	ft_what_size(t_list *stack_a);
+void	ft_what_size(t_list **stack_a);
 
 // print a sup:--------
 void	ft_print_list(t_list *list);

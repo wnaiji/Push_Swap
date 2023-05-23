@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wnaiji <wnaiji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:22:16 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/20 17:12:38 by wnaiji           ###   ########.fr       */
+/*   Updated: 2023/05/23 10:12:43 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_chek_value_max(unsigned long long nbr, int sign)
 	}
 	else if (nbr == int_min)
 		return ;
-	else if (nbr > INT_MAX)
+	else if (nbr > int_max)
 	{
 		ft_putstr("Error\n");
 		exit(EXIT_FAILURE);

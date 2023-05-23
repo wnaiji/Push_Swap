@@ -7,7 +7,8 @@ void	ft_print_list(t_list *list)
 	tmp = list;
 	if (!list)
 		return ;
-	while (tmp->next)
+	//while (tmp->next)
+	while(tmp)
 	{
 		printf("--->%d<---\n", tmp->content);
 		tmp = tmp->next;
@@ -69,8 +70,8 @@ int	main(int argc, char **argv)
 			i--;
 		}
 	}
-	ft_what_size(stack_a);
+	ft_what_size(&stack_a);
 	ft_print_list(stack_a);
-	//system("leaks a.out");
+	system("leaks a.out");
 	return (0);
 }

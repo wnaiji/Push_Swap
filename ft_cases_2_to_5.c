@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cases_2_to_5.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wnaiji <wnaiji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:08:40 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/22 16:25:50 by wnaiji           ###   ########.fr       */
+/*   Updated: 2023/05/23 14:23:51 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	ft_cases_4(t_list **stack_a, t_list **stack_b)
 {
 	while (ft_check_order(*stack_a) == 0)
 	{
-		printf("je suis la \n");
 		if (ft_position_minim(*stack_a) == 1)
 			ft_sa(*stack_a);
 		else if (ft_position_minim(*stack_a) == 2)
@@ -42,8 +41,6 @@ void	ft_cases_4(t_list **stack_a, t_list **stack_b)
 			ft_cases_2(*stack_b, 2);
 		ft_cases_3(*(&stack_a));
 		*stack_a = ft_pa(*stack_a, *(&stack_b));
-		printf("je suis la \n");
-		ft_print_list(*stack_a);
 	}
 }
 

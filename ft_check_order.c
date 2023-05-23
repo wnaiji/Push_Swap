@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_order.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wnaiji <wnaiji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:09:52 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/22 16:25:40 by wnaiji           ###   ########.fr       */
+/*   Updated: 2023/05/23 10:13:15 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,10 @@ int	ft_isminim(t_list *stack)
 	t_list	*tmp;
 	t_list	*tmp2;
 	int		index;
-	int		i;
 
 	tmp = stack;
 	tmp2 = stack;
 	index = stack->content;
-	i = 0;
 	while (tmp2->next)
 	{
 		while (tmp->next)
