@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 20:12:58 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/24 08:57:52 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/24 10:09:16 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ void	*ft_indexation(t_list *stack_a)
 	tmp = stack_a;
 	i = ft_isminim(stack_a);
 	stack_a = ft_position_index(stack_a, index, i);
-	printf("%d\n", i);
-	while (tmp)
+	while (tmp->next)
 	{
 		index++;
 		i = ft_next_minimum(stack_a, i);
@@ -41,47 +40,50 @@ int	ft_next_minimum(t_list *stack, int minim)
 
 	tmp = stack;
 	tmp2 = stack;
-	index = stack->content;
-		printf("je suis ici\n");
+	index = ft_ismax(stack);
 	while (tmp2)
 	{
-		tmp = stack;
 		while (tmp)
 		{
-			if (index > tmp->content && minim > tmp->content)
+			if (index > tmp->content && minim < tmp->content)
+				index = tmp->content;
+			tmp = tmp->next;
+		printf("%d\n", index);
+		}
+		tmp2 = tmp2->next;
+	}
+		printf("je suis ici\n");
+	return (index);
+}
+
+int	ft_ismax(t_list *stack)
+{
+	t_list	*tmp;
+	t_list	*tmp2;
+	int		index;
+
+	tmp = stack;
+	tmp2 = stack;
+	index = stack->content;
+	while (tmp2)
+	{
+		while (tmp)
+		{
+			if (index < tmp->content)
 				index = tmp->content;
 			tmp = tmp->next;
 		}
 		tmp2 = tmp2->next;
 	}
-		printf("%d\n", index);
 	return (index);
 }
-/*{
-	t_list	*tmp;
-	int		index;
-
-	tmp = stack;
-	index = minim;
-	while (tmp)
-	{
-		if (minim < tmp->content)
-			index = tmp->content;
-		if (minim < tmp->content && index > tmp->content)
-		{
-			index = tmp->content;
-		}
-		tmp = tmp->next;
-	}
-	return (index);
-}*/
 
 void	*ft_position_index(t_list *stack, int index, int i)
 {
 	t_list	*tmp;
 
 	tmp = stack;
-	while (tmp->next)
+	while (tmp)
 	{
 		if (i == tmp->content)
 		{

@@ -70,9 +70,9 @@ int	main(int argc, char **argv)
 			i--;
 		}
 	}
+	ft_what_size(&stack_a);
 	stack_a = ft_indexation(stack_a);
-	//ft_what_size(&stack_a);
 	ft_print_list(stack_a);
-	//system("leaks a.out");
+	system("leaks a.out");
 	return (0);
 }

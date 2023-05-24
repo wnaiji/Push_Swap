@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:22:02 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/23 20:59:41 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/24 09:58:19 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int	ft_cases_3_check_reverse(t_list *stack_a);
 void	*ft_indexation(t_list *stack_a);
 int	ft_next_minimum(t_list *stack, int minim);
 void	*ft_position_index(t_list *stack, int index, int i);
+int	ft_ismax(t_list *stack);
 
 //algo de trie:
 //ft_what_size.c
