@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 20:12:58 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/24 10:09:16 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/24 11:23:27 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,9 @@ int	ft_next_minimum(t_list *stack, int minim)
 			if (index > tmp->content && minim < tmp->content)
 				index = tmp->content;
 			tmp = tmp->next;
-		printf("%d\n", index);
 		}
 		tmp2 = tmp2->next;
 	}
-		printf("je suis ici\n");
 	return (index);
 }
 
@@ -93,4 +91,16 @@ void	*ft_position_index(t_list *stack, int index, int i)
 		tmp = tmp->next;
 	}
 	return (stack);
+}
+
+int	ft_last_index(t_list *list)
+{
+	t_list	*tmp;
+
+	tmp = list;
+	if (!list)
+		return (0);
+	while (tmp->next)
+		tmp = tmp->next;
+	return (tmp->index);
 }

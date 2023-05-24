@@ -6,23 +6,24 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:20:30 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/23 14:39:07 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/24 10:47:50 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	*ft_add_front_list(t_list *list, int val)
+void	*ft_add_front_list(t_list *list, int val, int index)
 {
 	t_list	*newcontent;
 
 	newcontent = malloc(sizeof(t_list));
 	newcontent->content = val;
+	newcontent->index = index;
 	newcontent->next = list;
 	return (newcontent);
 }
 
-void	*ft_add_back_list(t_list *list, int val)
+void	*ft_add_back_list(t_list *list, int val, int index)
 {
 	t_list	*newcontent;
 	t_list	*tmp;
@@ -30,6 +31,7 @@ void	*ft_add_back_list(t_list *list, int val)
 	tmp = list;
 	newcontent = malloc(sizeof(t_list));
 	newcontent->content = val;
+	newcontent->index = index;
 	newcontent->next = NULL;
 	if (!list)
 		return (newcontent);

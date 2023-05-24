@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_parsing.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wnaiji <wnaiji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 09:20:19 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/20 10:28:19 by wnaiji           ###   ########.fr       */
+/*   Updated: 2023/05/24 10:57:49 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_pars_without_quote(t_list *stack_a, char *arg)
 	}
 	ft_error_cases(arg);
 	i = ft_atoi(arg);
-	stack_a = ft_add_front_list(stack_a, i);
+	stack_a = ft_add_front_list(stack_a, i, 0);
 	ft_pars_stack_a(stack_a);
 	return (stack_a);
 }
@@ -47,7 +47,7 @@ t_list	*ft_pars_with_quote(t_list *stack_a, char *arg)
 	{
 		ft_error_cases(split[i]);
 		j = ft_atoi(split[i]);
-		stack_a = ft_add_front_list(stack_a, j);
+		stack_a = ft_add_front_list(stack_a, j, 0);
 		i++;
 	}
 	ft_free(split);
