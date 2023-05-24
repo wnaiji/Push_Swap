@@ -33,6 +33,6 @@ int	main(int argc, char **argv)
 	}
 	stack_a = ft_indexation(stack_a);
 	ft_what_size(&stack_a);
-	system("leaks a.out");
+	//system("leaks push_swap");
 	return (0);
 }

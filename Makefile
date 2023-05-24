@@ -6,7 +6,7 @@
 #    By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/28 17:46:04 by wnaiji            #+#    #+#              #
-#    Updated: 2023/05/24 15:59:37 by walidnaiji       ###   ########.fr        #
+#    Updated: 2023/05/24 22:11:29 by walidnaiji       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ CFLAGS = -Werror -Wextra -Wall
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+	gcc -o push_swap push_swap
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:22:16 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/23 10:12:43 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/24 20:24:28 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_chek_value_max(unsigned long long nbr, int sign)
 		ft_putstr("Error\n");
 		exit(EXIT_FAILURE);
 	}
-	else if (nbr == int_min)
+	else if (nbr == int_min && sign < 0)
 		return ;
 	else if (nbr > int_max)
 	{

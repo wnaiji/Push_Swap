@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_outils_libft.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wnaiji <wnaiji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 09:20:41 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/20 10:54:13 by wnaiji           ###   ########.fr       */
+/*   Updated: 2023/05/24 20:04:19 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	ft_free(char **split)
 void	ft_check_value(char *str)
 {
 	int	i;
-
+	
 	i = 0;
 	while (str[i])
 		i++;
@@ -80,4 +80,5 @@ void	ft_check_value(char *str)
 		ft_putstr("Error\n");
 		exit(EXIT_FAILURE);
 	}
+
 }
