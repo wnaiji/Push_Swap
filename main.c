@@ -20,11 +20,9 @@ int	main(int argc, char **argv)
 {
 	int	i;
 	t_list	*stack_a;
-	t_list	*stack_b;
 
 	i = argc - 1;
 	stack_a = NULL;
-	stack_b = NULL;
 	if (argc > 1)
 	{
 		while(i)
@@ -35,6 +33,6 @@ int	main(int argc, char **argv)
 	}
 	stack_a = ft_indexation(stack_a);
 	ft_what_size(&stack_a);
-	//system("leaks a.out");
+	system("leaks a.out");
 	return (0);
 }
