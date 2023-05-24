@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 15:50:22 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/23 14:35:49 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/24 13:56:53 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,6 @@ void	ft_what_size(t_list **stack_a)
 		ft_cases_4(*(&stack_a), &stack_b);
 	else if (ft_lstsize(*stack_a) == 5)
 		ft_cases_5(*(&stack_a), stack_b);
+	else
+		ft_sort_big_stack(*stack_a, stack_b);
 }

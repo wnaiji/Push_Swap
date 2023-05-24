@@ -6,7 +6,7 @@
 #    By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/28 17:46:04 by wnaiji            #+#    #+#              #
-#    Updated: 2023/05/23 20:17:09 by walidnaiji       ###   ########.fr        #
+#    Updated: 2023/05/24 13:13:18 by walidnaiji       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC = ft_list.c \
 		ft_cases_3.c \
 		ft_what_size.c \
 		ft_indexation.c \
+		ft_sort_big_stack.c \
 
 OBJS = $(SRC:.c=.o)
 

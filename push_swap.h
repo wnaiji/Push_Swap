@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:22:02 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/24 11:23:44 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/24 14:22:00 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ typedef struct	s_list
 	int				index;
 	struct s_list	*next;
 }				t_list;
+
+int	main(int argc, char **argv);
 
 //ajout ou sup d'un maillon:
 //ft_list.c
@@ -99,8 +101,12 @@ int	ft_last_index(t_list *list);
 //algo de trie:
 //ft_what_size.c
 void	ft_what_size(t_list **stack_a);
+//ft_sort_big_stack.c
+void	ft_sort_big_stack(t_list *stack_a, t_list *stack_b);
+void	ft_first_bit(t_list **stack_a, t_list **stack_b);
+void	ft_next_bits(t_list	**stack_a, t_list **stack_b, int i);
 
 // print a sup:--------
-void	ft_print_list(t_list *list);
+//void	ft_print_list(t_list *list);
 
 #endif
