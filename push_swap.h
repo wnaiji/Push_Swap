@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:22:02 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/23 14:33:25 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/23 20:59:41 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 typedef struct	s_list
 {
 	int				content;
+	int				index;
 	struct s_list	*next;
 }				t_list;
 
@@ -86,6 +87,12 @@ void	ft_cases_3(t_list **stack_a);
 int	ft_cases_3_check(t_list *stack_a);
 void	ft_cases_3_reverse(t_list **stack_b);
 int	ft_cases_3_check_reverse(t_list *stack_a);
+
+//indexation de la stack A
+//ft_indexation.c
+void	*ft_indexation(t_list *stack_a);
+int	ft_next_minimum(t_list *stack, int minim);
+void	*ft_position_index(t_list *stack, int index, int i);
 
 //algo de trie:
 //ft_what_size.c

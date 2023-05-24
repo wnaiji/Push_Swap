@@ -10,7 +10,7 @@ void	ft_print_list(t_list *list)
 	//while (tmp->next)
 	while(tmp)
 	{
-		printf("--->%d<---\n", tmp->content);
+		printf("--->%d<---\n", tmp->index);
 		tmp = tmp->next;
 	}
 }
@@ -70,8 +70,9 @@ int	main(int argc, char **argv)
 			i--;
 		}
 	}
-	ft_what_size(&stack_a);
+	stack_a = ft_indexation(stack_a);
+	//ft_what_size(&stack_a);
 	ft_print_list(stack_a);
-	system("leaks a.out");
+	//system("leaks a.out");
 	return (0);
 }

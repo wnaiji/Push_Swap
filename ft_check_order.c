@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 11:09:52 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/23 10:13:15 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/23 21:41:58 by walidnaiji       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int	ft_isminim(t_list *stack)
 	tmp = stack;
 	tmp2 = stack;
 	index = stack->content;
-	while (tmp2->next)
+	while (tmp2)
 	{
-		while (tmp->next)
+		while (tmp)
 		{
 			if (index > tmp->content)
 				index = tmp->content;
