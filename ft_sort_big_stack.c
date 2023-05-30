@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:12:17 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/24 14:22:15 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/30 10:59:40 by wnaiji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_sort_big_stack(t_list *stack_a, t_list *stack_b)
 	ft_first_bit(&stack_a, &stack_b);
 	while (ft_check_order(stack_a) == 0)
 		ft_next_bits(&stack_a, &stack_b, i++);
-	//ft_print_list(stack_a);
 }
 
 void	ft_first_bit(t_list **stack_a, t_list **stack_b)

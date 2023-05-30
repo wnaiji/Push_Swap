@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wnaiji <wnaiji@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/30 11:07:39 by wnaiji            #+#    #+#             */
+/*   Updated: 2023/05/30 11:19:39 by wnaiji           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*void	ft_print_list(t_list *list)
@@ -15,17 +27,16 @@
 	}
 }*/
 
-
 int	main(int argc, char **argv)
 {
-	int	i;
+	int		i;
 	t_list	*stack_a;
 
 	i = argc - 1;
 	stack_a = NULL;
 	if (argc > 1)
 	{
-		while(i)
+		while (i)
 		{
 			stack_a = ft_pars_without_quote(stack_a, argv[i]);
 			i--;
@@ -33,6 +44,5 @@ int	main(int argc, char **argv)
 	}
 	stack_a = ft_indexation(stack_a);
 	ft_what_size(&stack_a);
-	//system("leaks push_swap");
 	return (0);
 }

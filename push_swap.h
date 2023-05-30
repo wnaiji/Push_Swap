@@ -6,26 +6,24 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:22:02 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/24 20:09:02 by walidnaiji       ###   ########.fr       */
+/*   Updated: 2023/05/30 11:05:40 by wnaiji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUSH_SWAP_H
-# define FT_PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
 # include <stdio.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	int				content;
 	int				index;
 	struct s_list	*next;
-}				t_list;
-
-int	main(int argc, char **argv);
+}	t_list;
 
 //ajout ou sup d'un maillon:
 //ft_list.c
@@ -33,7 +31,7 @@ void	*ft_add_front_list(t_list *list, int val, int index);
 void	*ft_add_back_list(t_list *list, int val, int index);
 void	*ft_delete_in_head(t_list *list);
 void	*ft_delete_at_back(t_list *list);
-int	ft_last_content(t_list *list);
+int		ft_last_content(t_list *list);
 
 //Mouvement possible:
 //ft_swap.c
@@ -57,12 +55,12 @@ t_list	*ft_rrr(t_list *stack_a, t_list **stack_b);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 void	ft_chek_value_max(unsigned long long nbr, int sign);
-int	ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 //ft_split.c
 char	**ft_split(const char *s, const char c);
 //outils_libft.c
-int	ft_isdigit(int c);
-int	ft_atoi(const char *str);
+int		ft_isdigit(int c);
+int		ft_atoi(const char *str);
 size_t	ft_strlen(char **str);
 void	ft_free(char **split);
 void	ft_check_value(char *str);
@@ -77,26 +75,26 @@ char	**ft_rev_split(char **arg);
 
 //algo de check et de trie de 2 a 5:
 //ft_check_order.c
-int	ft_check_order(t_list *stack);
-int	ft_isminim(t_list *stack);
-int	ft_position_minim(t_list *stack);
+int		ft_check_order(t_list *stack);
+int		ft_isminim(t_list *stack);
+int		ft_position_minim(t_list *stack);
 //ft_cases_2_to_5.c
 void	ft_cases_2(t_list *stack, int index);
 void	ft_cases_4(t_list **stack_a, t_list **stack_b);
 void	ft_cases_5(t_list **stack_a, t_list *stack_b);
 //ft_cases_3.c
 void	ft_cases_3(t_list **stack_a);
-int	ft_cases_3_check(t_list *stack_a);
+int		ft_cases_3_check(t_list *stack_a);
 void	ft_cases_3_reverse(t_list **stack_b);
-int	ft_cases_3_check_reverse(t_list *stack_a);
+int		ft_cases_3_check_reverse(t_list *stack_a);
 
 //indexation de la stack A
 //ft_indexation.c
 void	*ft_indexation(t_list *stack_a);
-int	ft_next_minimum(t_list *stack, int minim);
+int		ft_next_minimum(t_list *stack, int minim);
 void	*ft_position_index(t_list *stack, int index, int i);
-int	ft_ismax(t_list *stack);
-int	ft_last_index(t_list *list);
+int		ft_ismax(t_list *stack);
+int		ft_last_index(t_list *list);
 
 //algo de trie:
 //ft_what_size.c
