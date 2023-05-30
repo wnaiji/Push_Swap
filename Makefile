@@ -6,7 +6,7 @@
 #    By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/28 17:46:04 by wnaiji            #+#    #+#              #
-#    Updated: 2023/05/30 13:55:22 by wnaiji           ###   ########.fr        #
+#    Updated: 2023/05/30 14:39:59 by walidnaiji       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ OBJS = $(SRC:.c=.o)
 
 NAME = push_swap
 
-CFLAGS = -Werror -Wextra -Wall
+CFLAGS = -Werror -Wextra -Wall -fsanitize=address -g3
 
 .c.o: $(SRC)
 	gcc $(CFLAGS) -I . -c $< -o $(<:.c=.o)

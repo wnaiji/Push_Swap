@@ -6,7 +6,7 @@
 /*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:12:17 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/30 10:59:40 by wnaiji           ###   ########.fr       */
+/*   Updated: 2023/05/30 15:08:30 by wnaiji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ void	ft_sort_big_stack(t_list *stack_a, t_list *stack_b)
 void	ft_first_bit(t_list **stack_a, t_list **stack_b)
 {
 	int		j;
-	t_list	*tmp;
 
-	tmp = *stack_a;
 	j = ft_lstsize(*stack_a);
 	while (j)
 	{
@@ -35,38 +33,34 @@ void	ft_first_bit(t_list **stack_a, t_list **stack_b)
 			*stack_b = ft_pb(*(&stack_a), *stack_b);
 		else
 			*stack_a = ft_ra(*stack_a);
-		tmp = tmp->next;
 		j--;
 	}
-	tmp = *stack_b;
-	while (tmp)
+	j = ft_lstsize(*stack_a);
+	while (j)
 	{
 		*stack_a = ft_pa(*stack_a, *(&stack_b));
-		tmp = tmp->next;
+		j--;
 	}
 }
 
 void	ft_next_bits(t_list	**stack_a, t_list **stack_b, int i)
 {
 	int			j;
-	t_list		*tmp;
 
 	j = ft_lstsize(*stack_a);
-	tmp = *stack_a;
 	while (j)
 	{
 		if ((((*stack_a)->index >> i) & 1) == 0)
 			*stack_b = ft_pb(*(&stack_a), *stack_b);
 		else
 			*stack_a = ft_ra(*stack_a);
-		tmp = tmp->next;
 		j--;
 	}
-	tmp = *stack_b;
-	while (tmp)
+	j = ft_lstsize(*stack_b);
+	while (j)
 	{
 		*stack_a = ft_pa(*stack_a, *(&stack_b));
-		tmp = tmp->next;
+		j--;
 	}
 	i++;
 }

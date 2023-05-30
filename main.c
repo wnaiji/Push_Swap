@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wnaiji <wnaiji@student.42.fr>              +#+  +:+       +#+        */
+/*   By: walidnaiji <walidnaiji@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 11:07:39 by wnaiji            #+#    #+#             */
-/*   Updated: 2023/05/30 11:48:32 by wnaiji           ###   ########.fr       */
+/*   Updated: 2023/05/30 15:09:49 by wnaiji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 	//while (tmp->next)
 	while(tmp)
 	{
-		printf("--->%d<---\n", tmp->index);
+		printf("--->%d<---\n", tmp->content);
 		tmp = tmp->next;
 	}
 }*/
